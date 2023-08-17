@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity()
                 }
 
                 // Получаем данные
-                val dates = Dates(ArrayList(), ArrayList(), ArrayList(), ArrayList(), ArrayList())
+                val dates = Dates(ArrayList(), ArrayList(), ArrayList(), ArrayList(), ArrayList(), ArrayList())
                 var root = JsonParser.parseString(response.body().string()).asJsonObject
                 root = root["forecast"] as JsonObject
                 val rootArray = root["forecastday"] as JsonArray
@@ -88,8 +88,9 @@ class MainActivity : AppCompatActivity()
 
                     dates.dates.add(rootArray[i].asJsonObject["date"].asString)
                     dates.avgTemp.add(rootArray[i].asJsonObject["day"].asJsonObject["avgtemp_c"].asDouble)
-                    dates.timeUp.add(rootArray[i].asJsonObject["astro"].asJsonObject["sunrise"].asString)
-                    dates.timeDown.add(rootArray[i].asJsonObject["astro"].asJsonObject["sunset"].asString)
+                    dates.wind.add(rootArray[i].asJsonObject["day"].asJsonObject["maxwind_kph"].asDouble)
+                    dates.humidity.add(rootArray[i].asJsonObject["day"].asJsonObject["avghumidity"].asDouble)
+                    dates.condition.add(rootArray[i].asJsonObject["day"].asJsonObject["condition"].asJsonObject["text"].asString)
                     dates.iconUrl.add("https://" + rootArray[i].asJsonObject["day"].asJsonObject["condition"].asJsonObject["icon"].asString.substring(2))
                 }
                 runOnUiThread {

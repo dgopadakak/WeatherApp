@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="@string/avg_temp"
         app:layout_constraintEnd_toStartOf="@+id/textViewTemp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,22 +42,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@+id/textViewTempTitle"
         app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
 
     <TextView
-        android:id="@+id/textViewTimeUpTitle"
+        android:id="@+id/textViewConditionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/condition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempTitle" />
+
+    <TextView
+        android:id="@+id/textViewCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewConditionTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempTitle" />
+
+    <TextView
+        android:id="@+id/textViewMaxwindTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/time_up"
-        app:layout_constraintEnd_toStartOf="@+id/textViewTimeUp"
+        android:text="@string/maxwind"
+        app:layout_constraintEnd_toStartOf="@+id/textViewMaxwind"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewTimeUp"
+        android:id="@+id/textViewMaxwind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -66,23 +85,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewTimeDownTitle"
+        android:id="@+id/textViewHumidityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/time_down"
-        app:layout_constraintEnd_toStartOf="@+id/textViewTimeDown"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeUpTitle" />
+        android:text="@string/humidity"
+        app:layout_constraintEnd_toStartOf="@+id/textViewHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMaxwindTitle" />
 
     <TextView
-        android:id="@+id/textViewTimeDown"
+        android:id="@+id/textViewHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toStartOf="@+id/webView"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeUp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewMaxwindTitle" />
 
     <WebView
         android:id="@+id/webView"
@@ -103,6 +122,6 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewConditionTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

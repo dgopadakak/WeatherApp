@@ -3,9 +3,9 @@
     <string name="city">Город: </string>
     <string name="enter_city">Введите название города</string>
     <string name="get_weather">Узнать погоду</string>
-    <string name="date">Дата</string>
-    <string name="avg_temp">Средняя температура</string>
-    <string name="time_up">Восход</string>
-    <string name="time_down">Закат</string>
-    <string name="climate">Климат</string>
+    <string name="date">Дата:</string>
+    <string name="avg_temp">Средн. темпер.:</string>
+    <string name="condition">Описание:</string>
+    <string name="maxwind">Скор. ветра:</string>
+    <string name="humidity">Влажность:</string>
 </resources>

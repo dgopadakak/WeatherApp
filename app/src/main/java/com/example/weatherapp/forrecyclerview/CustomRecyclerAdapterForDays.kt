@@ -16,8 +16,9 @@ class CustomRecyclerAdapterForDays(private val dates: Dates):
     {
         val textViewDate: TextView = itemView.findViewById(R.id.textViewDate)
         val textViewTemp: TextView = itemView.findViewById(R.id.textViewTemp)
-        val textViewTimeUp: TextView = itemView.findViewById(R.id.textViewTimeUp)
-        val textViewTimeDown: TextView = itemView.findViewById(R.id.textViewTimeDown)
+        val textViewCondition: TextView = itemView.findViewById(R.id.textViewCondition)
+        val textViewMaxwind: TextView = itemView.findViewById(R.id.textViewMaxwind)
+        val textViewHumidity: TextView = itemView.findViewById(R.id.textViewHumidity)
         val webViewClimate: WebView = itemView.findViewById(R.id.webView)
     }
 
@@ -36,8 +37,9 @@ class CustomRecyclerAdapterForDays(private val dates: Dates):
     {
         holder.textViewDate.text = dates.dates[position]
         holder.textViewTemp.text = dates.avgTemp[position].toString()
-        holder.textViewTimeUp.text = dates.timeUp[position]
-        holder.textViewTimeDown.text = dates.timeDown[position]
+        holder.textViewMaxwind.text = dates.wind[position].toString()
+        holder.textViewHumidity.text = dates.humidity[position].toString()
+        holder.textViewCondition.text = dates.condition[position]
         holder.webViewClimate.loadUrl(dates.iconUrl[position])
     }
 }
